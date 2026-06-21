@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/adAI/__init__.py
+src/adAI/cnn.py
+src/adAI/core.py
+src/adAI/mlp.py
+src/adAI/perceptron.py
+src/adAI.egg-info/PKG-INFO
+src/adAI.egg-info/SOURCES.txt
+src/adAI.egg-info/dependency_links.txt
+src/adAI.egg-info/requires.txt
+src/adAI.egg-info/top_level.txt
+tests/test_cnn.py
+tests/test_core.py
