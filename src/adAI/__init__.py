@@ -18,6 +18,12 @@ from .perceptron import (
 )
 from .mlp import GenerateMLP, GenerateXORMlp, MLP, generate_xor_data
 from .cnn import GenerateCNN, CNN
+from .snn import GenerateSNN, SNN
+from .gnn import GenerateGNN, GNN, Graph
+from .transformer import GenerateTransformer, Transformer
+from .diffusion import GenerateDiffusionModel, DiffusionModel
+from .rl import GeneratePPOAgent, PPOAgent, Environment
+from .datasets import load_data, load_synthetic_cnn_data, load_synthetic_snn_data, load_synthetic_graph_data, load_synthetic_sequence_data
 from .graph import Node, PlaceholderNode, ParameterNode, OpNode, Graph
 from .base import BaseModel
 from .activations import (
@@ -84,6 +90,23 @@ __all__ = [
     'generate_xor_data',
     'GenerateCNN',
     'CNN',
+    'GenerateSNN',
+    'SNN',
+    'GenerateGNN',
+    'GNN',
+    'Graph',
+    'GenerateTransformer',
+    'Transformer',
+    'GenerateDiffusionModel',
+    'DiffusionModel',
+    'GeneratePPOAgent',
+    'PPOAgent',
+    'Environment',
+    'load_data',
+    'load_synthetic_cnn_data',
+    'load_synthetic_snn_data',
+    'load_synthetic_graph_data',
+    'load_synthetic_sequence_data',
     'BaseModel',
     'sigmoid',
     'relu',

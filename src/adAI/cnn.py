@@ -6,7 +6,7 @@ import numpy as np
 from typing import List, Tuple, Optional, Dict, Any
 from .base import BaseModel
 from .activations import get_activation, softmax, sigmoid, relu
-from .backend import randn, zeros, to_numpy, from_numpy, add, mul, sub, mean
+from .backend import randn, zeros, to_numpy, from_numpy, add, mul, sub, mean, matmul
 
 
 class Conv2DLayer:

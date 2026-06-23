@@ -88,14 +88,14 @@ class TestModelTraining:
         """Test model compilation"""
         model = _cpp.MLP([4, 8, 2], "relu", "test_compile")
         model.build([4])
-        model.compile("adam", 0.01f, "mse")
+        model.compile("adam", 0.01, "mse")
         # Should not raise an exception
     
     def test_model_predict(self):
         """Test model prediction"""
         model = _cpp.MLP([4, 8, 2], "relu", "test_predict")
         model.build([4])
-        model.compile("adam", 0.01f, "mse")
+        model.compile("adam", 0.01, "mse")
         
         x = _cpp.numpy_to_tensor(np.random.randn(4).astype(np.float32))
         output = model.predict(x)
@@ -159,12 +159,12 @@ class TestMixedPrecision:
         """Test mixed precision trainer creation"""
         model = _cpp.MLP([4, 8, 2], "relu", "test_mp")
         model.build([4])
-        model.compile("adam", 0.01f, "mse")
+        model.compile("adam", 0.01, "mse")
         
         # This will fail on CPU, but should not crash
         try:
-            trainer = _cpp.MixedPrecisionTrainer(model, loss_scale=1.0f)
-            assert trainer.get_loss_scale() == 1.0f
+            trainer = _cpp.MixedPrecisionTrainer(model, loss_scale=1.0)
+            assert trainer.get_loss_scale() == 1.0
         except RuntimeError:
             # Expected on CPU
             pass
